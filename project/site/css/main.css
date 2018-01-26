@@ -1,11 +1,181 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+@-webkit-keyframes AnimationName {
+   0%{background-position:0% 71%}
+   50%{background-position:100% 30%}
+   100%{background-position:0% 71%}
+}
+@-moz-keyframes AnimationName {
+   0%{background-position:0% 71%}
+   50%{background-position:100% 30%}
+   100%{background-position:0% 71%}
+}
+@keyframes AnimationName {
+   0%{background-position:0% 71%}
+   50%{background-position:100% 30%}
+   100%{background-position:0% 71%}
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
 body{
     background-color: white;
     font-family: 'Roboto', sans-serif;
+    width: 400px;
+    background-color: teal;
+    background: linear-gradient(23deg, #24cea2, #ce7824);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 22s ease infinite;
+    -moz-animation: AnimationName 22s ease infinite;
+    animation: AnimationName 22s ease infinite;
+}
+
+header{
+    display: grid;
+    background-color: black;
+    color: white;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    height: 100px;
+}
+
+.navigation{
+    grid-row: 2 / 3;
+    font-size: 1.1em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-content: center;
+}
+
+nav ul li {
+    display: inline;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 3px;
+    border-radius: 3px;
+
+}
+
+.header{
+    font-size: 48px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.material-icons{
+    font-size: 35px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 5px;
+    background-color: white;
+}
+
+.login_main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 5px;
+}
+
+main .image {
+    grid-row: span 2;
+    grid-column: span 2;
+    /* width: ; */
+}
+
+img{
+    width: 100%;
+}
+
+.text {
+    grid-row: span 1;
+    grid-column: span 2;
+
+}
+
+main .empty {
+    height: 100%;
+    grid-row: span 1;
+    grid-column: span 6;
+}
+
+.login_text {
+    grid-row: span 1;
+    grid-column: span 6;
+    font-size: 24px;
+}
+
+.login_main input {
+    grid-row: span 1;
+    grid-column: span 6;
+}
+
+.login_main button {
+    grid-row: span 1;
+    grid-column: span 3;
+}
+
+.signup_main {
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 5px;
+}
+
+.signup_main div {
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.signup_main .half {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+.signup_main .full {
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.success_main {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto;
 }
 
 @media only screen and (max-device-width: 400px) {
+
+    body{
+        width: auto;
+        background-color: white;
+    }
 
     header{
         display: grid;
