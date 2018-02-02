@@ -3,5 +3,5 @@ function toggleMenu(){
     element.classList.toggle("show");
 
     element = document.querySelector(".openmenu");
-    element.classList.toggle("show_button");
+    element.classList.toggle("hide_button");
 }
