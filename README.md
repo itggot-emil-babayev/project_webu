@@ -1,2 +1,2 @@
-# projekt_webu
+# project_webu
 A project in the Web Design course.
